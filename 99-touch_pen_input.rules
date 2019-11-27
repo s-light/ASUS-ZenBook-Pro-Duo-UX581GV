@@ -1,0 +1,11 @@
+
+# Touch & Pen input setup for
+# ASUS ZenBook Pro Duo UX581GV
+# copy this file as following:
+# sudo cp 99-touch_pen_input.rules /etc/udev/rules.d/
+
+# ACTION=="add", \
+# SUBSYSTEM=="usb", \
+# ATTR{manufacturer}=="",\
+# ATTR{product}=="",\
+# MODE="0666"
