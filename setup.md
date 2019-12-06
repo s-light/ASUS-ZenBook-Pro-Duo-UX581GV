@@ -21,3 +21,9 @@ copy rules & reload to activate.
 sudo cp 99-touch_pen_input.rules /etc/udev/rules.d/
 sudo udevadm control --reload-rules
 ``` -->
+
+### enable multitouch input in firefox
+
+```bash
+$ echo -e "\n# setup firefox multitouch \nMOZ_USE_XINPUT2=1\n" >> ~/.bashrc
+```

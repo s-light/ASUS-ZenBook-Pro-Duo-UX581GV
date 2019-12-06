@@ -8,6 +8,7 @@ all research regarding (multi) touch & pen input
 - [multi touch & pen input](#multi-touch-pen-input)
 - [test your devices](#test-your-devices)
 - [find props](#find-props)
+- [mapping](#mapping)
 - [multitouch](#multitouch)
 	- [find device path](#find-device-path)
 	- [test](#test)
@@ -24,7 +25,7 @@ good base information in this askubuntu answer:
 link collection:
 - [xorg.conf INPUTDEVICE SECTION](https://www.x.org/releases/current/doc/man/man5/xorg.conf.5.xhtml#heading8)
 - [How to set xinput properties triggered by udev device connection?](https://unix.stackexchange.com/a/439528/77378)
-
+- [archlinux Touchscreen](https://wiki.archlinux.org/index.php/Touchscreen)
 
 # test your devices
 
@@ -98,6 +99,10 @@ Device 'ELAN9008:00 04F3:29B6 Pen (0)':
         libinput Tablet Tool Pressurecurve (680):       0.000000, 0.000000, 0.000000, 0.000000, 1.000000, 1.000000, 1.000000, 1.000000
 
 ```
+
+# mapping
+
+[InputCoordinateTransformation](https://wiki.ubuntu.com/X/InputCoordinateTransformation)
 
 
 
@@ -355,5 +360,22 @@ kivy$ python3  ./kivy_testing/share/kivy-examples/demo/touchtracer/main.py
 
 
 ## Firefox
-- [Firefox Touch Events Demo](https://mdn.mozillademos.org/en-US/docs/Web/API/Touch_events$samples/Example)
+
+enable xinput:
+```bash
+$ MOZ_USE_XINPUT2=1 /usr/bin/firefox
+```
+source:
+- [archlinux Firefox Enable touchscreen gestures](https://wiki.archlinux.org/index.php/Firefox/Tweaks#Enable_touchscreen_gestures)
+- [How can I get Firefox to recognize multitouch gestures on a touch screen?](https://askubuntu.com/questions/536663/how-can-i-get-firefox-to-recognize-multitouch-gestures-on-a-touch-screen/1193861)
+- [How to enable touchscreen gestures for Firefox](https://support.mozilla.org/en-US/questions/1091627)
+enable for ever ;-)
+```bash
+$ echo -e "\n# setup firefox multitouch \nMOZ_USE_XINPUT2=1\n" >> ~/.bashrc
+```
+
+- [Firefox Touch Events Demo](https://mdn.mozillademos.org/en-US/docs/Web/API/Touch_events$samples/Example) (seems there is a bug in the code..)
+    - [same demo as jsfiddle](http://jsfiddle.net/Darbicus/z3Xdx/10/) [result only](http://fiddle.jshell.net/Darbicus/z3Xdx/10/show/)
 - [touch example](http://dev.openlayers.org/examples/multitouch.html)
+- [Multitouch Canvas Fingerpaint Demo](https://www.paulirish.com/demo/multi)
+- [PaperJS demo](http://sketch.paperjs.org/#V/0.12.3/S/lVOxbsIwEP0VKwtGoIShE2mGCrF1QGLoQBic+AIWiR3ZThBC/Ht9TigpRW3x4vPde3fn5/M5kKyCYB6sD2DzfTANcsXxHEVvWrMTsYoYqzQQCUdSM7s3qWyZ7kySkM02TmUqi0bmVijp8E2+X1umLYV2TM6pJG4hw0cAOdCG/SHuwlG00MDsrQipoSfc+N6feMjKmXTck9EfGqvVARaqVNph/B5qJrmqHuE+BPe5XgYhE9aN2VM0kXH5eatKtfDUpVYaWpDWdCiSNVlWCrnrwqKgPT4sQe6wnyTpO+kcX4VwFUpTLChcqVnstlfyne58k8l4wLjTzWfeiG38AKGEtA7SCjiGO7BL7HqFzmuLjje+I3o5GefUs++jPhXX7EiHkUtnXh7Ku5Qc1f1D3Ku2y6rGMfFTyG6T6uaO1FrlYAxxz6V/03o2VOvbPA+b5CpvKqdHmCl+wgt7dd6FsSBB05FP7AuPpoPpn5KClQbw9v/KgMN1TYD2s3yQ/Ep3Qg7Y7ktn7nMd/DOZYL7ZXj4B)
