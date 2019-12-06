@@ -14,6 +14,8 @@ S:  SerialNumber=200901010001
 
 ## touch screen
 
+[manufacturer website](http://www.emc.com.tw/emc/en/Product/Solution/PenAndTouchInputSolutions)
+
 ### Top Screen
 touch: `ELAN9008:00 04F3:29B6`
 pen: `ELAN9008:00 04F3:29B6 Pen (0)`
@@ -22,20 +24,10 @@ pen: `ELAN9008:00 04F3:29B6 Pen (0)`
 touch: `ELAN9009:00 04F3:29A1`
 pen: `ELAN9009:00 04F3:29A1 Pen (0)`
 
-
-### map
-```
-xinput map-to-output  "pointer:ELAN9008:00 04F3:29B6" eDP-1-1
-xinput map-to-output  "ELAN9008:00 04F3:29B6 Pen (0)" eDP-1-1
-xinput map-to-output  "pointer:ELAN9009:00 04F3:29A1" DP-1-2
-xinput map-to-output  "ELAN9009:00 04F3:29A1 Pen (0)" DP-1-2
-```
-
 ### TouchPad
 `ELAN1406:00 04F3:3101 Touchpad`
 
-change driver to use evid multitouch instead of libinput:
-?!
+change driver to use evid multitouch instead of libinput?!
 
 
 
