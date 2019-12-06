@@ -371,7 +371,7 @@ source:
 - [How to enable touchscreen gestures for Firefox](https://support.mozilla.org/en-US/questions/1091627)
 enable for ever ;-)
 ```bash
-$ echo -e "\n# setup firefox multitouch \nMOZ_USE_XINPUT2=1\n" >> ~/.bashrc
+$ echo -e "\n# setup firefox multitouch \nexport MOZ_USE_XINPUT2=1\n" >> ~/.profile
 ```
 
 - [Firefox Touch Events Demo](https://mdn.mozillademos.org/en-US/docs/Web/API/Touch_events$samples/Example) (seems there is a bug in the code..)

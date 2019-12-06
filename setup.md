@@ -25,5 +25,5 @@ sudo udevadm control --reload-rules
 ### enable multitouch input in firefox
 
 ```bash
-$ echo -e "\n# setup firefox multitouch \nMOZ_USE_XINPUT2=1\n" >> ~/.bashrc
+$ echo -e "\n# setup firefox multitouch \nMOZ_USE_XINPUT2=1\n" >> ~/.profile
 ```
