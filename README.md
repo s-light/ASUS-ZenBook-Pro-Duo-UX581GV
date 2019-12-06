@@ -9,4 +9,6 @@ info &amp; helper scripts for running Kubuntu on the device.
 - [setup](setup.md)
 
 
-additional information about the [hardware / drivers](hardware.md)
+additional information about
+- the [hardware / drivers](hardware.md)
+- my [research](research.md) how things are working...
