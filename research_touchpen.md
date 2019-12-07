@@ -118,6 +118,9 @@ experiments:
 ```bash
 $ xinput set-prop "pointer:ELAN9008:00 04F3:29B6" 'Coordinate Transformation Matrix' 1.000000 0.000000 0.000000 0.000000 0.662577 0.000000 0.000000 0.000000 1.000000
 $ xinput set-prop "ELAN9008:00 04F3:29B6 Pen (0)" 'Coordinate Transformation Matrix' 1.000000 0.000000 0.000000 0.000000 0.662577 0.000000 0.000000 0.000000 1.000000
+
+$ xinput set-prop "pointer:ELAN9009:00 04F3:29A1" 'Coordinate Transformation Matrix' 1.000000 0.000000 0.000000 0.000000 0.337423 0.662577 0.000000 0.000000 1.000000
+$ xinput set-prop "ELAN9009:00 04F3:29A1 Pen (0)" 'Coordinate Transformation Matrix' 1.000000 0.000000 0.000000 0.000000 0.337423 0.662577 0.000000 0.000000 1.000000
 ```
 
 99-touch_pen_input.conf
@@ -132,7 +135,7 @@ EndSection
 ```
 `CoordinateTransformationMatrix` does not work -
 it is not part of libinput.
-i dont know if it is possible to set it with the InputClass section.
+i don't know if it is possible to set it with the InputClass section.
 
 
 
