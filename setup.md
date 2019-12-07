@@ -9,7 +9,7 @@ to get to a nice working overall experience...
 
 ## touch & pen input
 
-copy config (and reboot)
+copy config
 
 ```bash
 sudo cp 99-touch_pen_input.conf /usr/share/X11/xorg.conf.d/
@@ -22,7 +22,7 @@ but it can take some time till it lands in the official packages...
 if you want to try directly copy the two files
 - [elan-29b6.tablet](https://github.com/s-light/libwacom/blob/ASUS_ZenBook_Pro_Duo/data/elan-29b6.tablet)
 - [elan-29a1.tablet](https://github.com/s-light/libwacom/blob/ASUS_ZenBook_Pro_Duo/data/elan-29a1.tablet)
-
+to `/usr/share/libwacom/` as [described in the wiki](https://github.com/linuxwacom/libwacom/wiki#data-files)
 
 ### enable multitouch input in firefox
 
