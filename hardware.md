@@ -28,7 +28,34 @@ pen: `ELAN9009:00 04F3:29A1 Pen (0)`
 `ELAN1406:00 04F3:3101 Touchpad`
 
 change driver to use evid multitouch instead of libinput?!
+or better add 'wacom' support?!
 
+### Pen / Stylus
+Label:
+Product: Active stylus
+Model: `SPEN-ASU-05`
+Manufacturer: Sunwoda Electronic Co., Ltd.
+and [looks like this one](https://fccid.io/NCC/CCAI18LP0230T1/fWgpDt4ifGc=)
+
+
+
+
+
+the [ASUS ZenBook Pro Duo UX581GV](https://www.asus.com/Laptops/ZenBook-Pro-Duo-UX581GV/Tech-Specs/) has two internal screens -
+- top/main oled screen (345mm x 194mm → 13.59in x 7.64in)
+- bottom/secondary TFT screen (345mm x 99mm → 13.59in x 3.9in)
+both with touch and pen support.
+
+the pen that was with the laptop has this info on the label:
+Product: Active stylus
+Model: SPEN-ASU-05
+Manufacturer: Sunwoda Electronic Co., Ltd.
+and [the FCC / NCC id can be found with corresponding pictures](https://fccid.io/NCC/CCAI18LP0230T1/fWgpDt4ifGc=)
+
+i have also added the files in libwacom as pullrequest:
+https://github.com/linuxwacom/libwacom/pull/186
+
+[sysinfo.yzHeVK384m.tar.gz](https://github.com/linuxwacom/wacom-hid-descriptors/files/3934973/sysinfo.yzHeVK384m.tar.gz)
 
 
 

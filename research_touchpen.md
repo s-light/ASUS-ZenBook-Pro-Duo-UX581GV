@@ -26,6 +26,12 @@ link collection:
 - [xorg.conf INPUTDEVICE SECTION](https://www.x.org/releases/current/doc/man/man5/xorg.conf.5.xhtml#heading8)
 - [How to set xinput properties triggered by udev device connection?](https://unix.stackexchange.com/a/439528/77378)
 - [archlinux Touchscreen](https://wiki.archlinux.org/index.php/Touchscreen)
+- [How to configure the TrackPoint](http://www.thinkwiki.org/wiki/How_to_configure_the_TrackPoint)
+- [ELAN & wacom driver](https://www.reddit.com/r/linuxhardware/comments/9098wd/bamboo_ink_button_3_not_working/e2qubkz)
+
+
+
+
 
 # test your devices
 
@@ -66,6 +72,8 @@ motion a[0]=11037163 a[1]=11456012 a[2]=0
 ```
 
 
+
+
 # find props
 
 get props
@@ -103,6 +111,48 @@ Device 'ELAN9008:00 04F3:29B6 Pen (0)':
 # mapping
 
 [InputCoordinateTransformation](https://wiki.ubuntu.com/X/InputCoordinateTransformation)
+
+check logfile: [/var/log/Xorg.0.log](/var/log/Xorg.0.log)
+
+experiments:
+```bash
+$ xinput set-prop "pointer:ELAN9008:00 04F3:29B6" 'Coordinate Transformation Matrix' 1.000000 0.000000 0.000000 0.000000 0.662577 0.000000 0.000000 0.000000 1.000000
+$ xinput set-prop "ELAN9008:00 04F3:29B6 Pen (0)" 'Coordinate Transformation Matrix' 1.000000 0.000000 0.000000 0.000000 0.662577 0.000000 0.000000 0.000000 1.000000
+```
+
+99-touch_pen_input.conf
+```
+Section "InputClass"
+        Identifier                      "TopTouchScreen_Mapping"
+        MatchProduct                    "ELAN9008:00 04F3:29B6"
+        MatchIsTouchscreen  "on"
+        # Option  "CoordinateTransformationMatrix"  "1.000000 0.000000 0.000000 0.000000 0.662577 0.000000 0.000000 0.000000 1.000000"
+        Option  "CalibrationMatrix"  "1.000000 0.000000 0.000000 0.000000 0.662577 0.000000 0.000000 0.000000 1.000000"
+EndSection
+```
+`CoordinateTransformationMatrix` does not work -
+it is not part of libinput.
+i dont know if it is possible to set it with the InputClass section.
+
+
+
+## 'wacom' support
+
+the [ASUS ZenBook Pro Duo UX581GV](https://www.asus.com/Laptops/ZenBook-Pro-Duo-UX581GV/Tech-Specs/) has two internal screens -
+- top/main OLED screen (345mm x 194mm → 13.59in x 7.64in)
+- bottom/secondary TFT screen (345mm x 99mm → 13.59in x 3.9in)
+both with touch and pen support.
+
+[sysinfo.yzHeVK384m.tar.gz](https://github.com/linuxwacom/wacom-hid-descriptors/files/3934973/sysinfo.yzHeVK384m.tar.gz)
+
+
+
+
+
+
+
+
+
 
 
 
