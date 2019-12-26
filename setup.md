@@ -5,7 +5,15 @@
 here i will collect all information about what scripts or tools to use
 to get to a nice working overall experience...
 
+## graphics
+currently i use the proprietary nvidia drivers.
+to get the newest version have a look at the [graphics-drivers ppa](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa)
+a good read is [this askubuntu answer](https://askubuntu.com/a/61433/207905).
 
+## screen brightness
+for now i use [ICC Brightness](https://github.com/udifuchs/icc-brightness)
+for me this works on the main screen only.
+for additional info have a look at [issue #1 - screen brightness](https://github.com/s-light/ASUS-ZenBook-Pro-Duo-UX581GV/issues/1)
 
 ## touch & pen input
 
@@ -29,3 +37,5 @@ to `/usr/share/libwacom/` as [described in the wiki](https://github.com/linuxwac
 ```bash
 $ echo -e "\n# setup firefox multitouch \nMOZ_USE_XINPUT2=1\n" >> ~/.profile
 ```
+> if enabled the content will not scroll with a mouse-wheel on 'not active' windows..
+> this is a known limitation/bug.
