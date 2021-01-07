@@ -1,0 +1,5 @@
+sudo cp ux581_brightness.{path,service} /etc/systemd/system/
+sudo cp ux581_brightness.sh /usr/local/sbin/
+sudo systemctl enable ux581_brightness.path
+sudo systemctl start ux581_brightness.path
+# Profit!

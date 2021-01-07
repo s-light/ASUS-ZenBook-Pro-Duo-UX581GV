@@ -1,0 +1,13 @@
+[Unit]
+Description=Watch /sys for Brightness Changes and Update Displays
+ConditionPathExists=/proc/acpi/call
+ConditionPathExists=/sys/class/backlight/intel_backlight/brightness
+ConditionPathExists=/sys/class/backlight/intel_backlight/max_brightness
+ConditionPathExists=/usr/local/sbin/ux581_brightness.sh
+StartLimitIntervalSec=0
+
+[Service]
+Type=Oneshot
+ExecStart=/usr/local/sbin/ux581_brightness.sh
+User=root
+Group=root
