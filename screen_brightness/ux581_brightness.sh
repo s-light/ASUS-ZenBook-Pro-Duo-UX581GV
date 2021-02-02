@@ -38,6 +38,11 @@ for home_dir in $(getent passwd | cut -d: -f6); do
 		xauth merge ${home_dir}/.Xauthority
 	fi
 done
+for uid in $(getent passwd | cut -d: -f3); do
+	if [ -f /run/user/${uid}/gdm/Xauthority ]; then
+		xauth merge /run/user/${uid}/gdm/Xauthority
+	fi
+done
 
 # Scale number from old range to new range
 # scale_num_to_range number old_range_lower old_range_upper new_range_lower new_range_upper
