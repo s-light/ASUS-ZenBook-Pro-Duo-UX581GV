@@ -14,8 +14,8 @@ max_oled_brightness=100
 oled_monitor_regex="eDP[0-9\-]+"
 
 # Screenpad brightness range & adjustment
-# Mapping is percent called for:Percent screenpad should be lit
-# e.g. 50:75 means when 50% brightness is asked for, set the screenpad to 75%
+# Mapping is percent called for:Amount screenpad should be lit
+# e.g. 50:128 means when 50% brightness is asked for, set the screenpad to 128 out of 255
 screenpad_mapping=( "0:10" "5:13" "50:128" "75:235" "100:255" )
 
 req_files=( "/proc/acpi/call" "${backlight_dir}/brightness" "${backlight_dir}/max_brightness" )
