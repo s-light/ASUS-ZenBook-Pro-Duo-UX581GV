@@ -16,6 +16,9 @@ S:  SerialNumber=200901010001
 
 [manufacturer website](http://www.emc.com.tw/emc/en/Product/Solution/PenAndTouchInputSolutions)
 
+change driver to use evid multitouch instead of libinput?!
+or better add 'wacom' support?!
+
 ### Top Screen
 touch: `ELAN9008:00 04F3:29B6`
 pen: `ELAN9008:00 04F3:29B6 Pen (0)`
@@ -27,11 +30,12 @@ pen: `ELAN9009:00 04F3:29A1 Pen (0)`
 ### TouchPad
 `ELAN1406:00 04F3:3101 Touchpad`
 
-change driver to use evid multitouch instead of libinput?!
-or better add 'wacom' support?!
-
 number-pad functionallity working with [asus-touchpad-numpad-driver](https://github.com/asus-linux-drivers/asus-touchpad-numpad-driver)
 [thanks @ldrahnik](https://github.com/s-light/ASUS-ZenBook-Pro-Duo-UX581GV/issues/2)
+
+
+
+
 
 ### Pen / Stylus
 Label:
