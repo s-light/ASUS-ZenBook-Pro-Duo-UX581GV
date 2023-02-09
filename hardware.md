@@ -30,6 +30,9 @@ pen: `ELAN9009:00 04F3:29A1 Pen (0)`
 change driver to use evid multitouch instead of libinput?!
 or better add 'wacom' support?!
 
+number-pad functionallity working with [asus-touchpad-numpad-driver](https://github.com/asus-linux-drivers/asus-touchpad-numpad-driver)
+[thanks @ldrahnik](https://github.com/s-light/ASUS-ZenBook-Pro-Duo-UX581GV/issues/2)
+
 ### Pen / Stylus
 Label:
 Product: Active stylus
