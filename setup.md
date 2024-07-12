@@ -39,3 +39,15 @@ $ echo -e "\n# setup firefox multitouch \nMOZ_USE_XINPUT2=1\n" >> ~/.profile
 ```
 > if enabled the content will not scroll with a mouse-wheel on 'not active' windows..
 > this is a known limitation/bug.
+
+### application window screen moving
+
+for KDE you don't need any fancy tools for the window screen management:
+it offers keyboard options to move the current window from one to the other screen.
+i have added the 'toggle screen' key to Window to next Screen
+this results in toggle if only the two screens are active - 
+and moves the window through all screens if an 3 external screen is attached...
+
+![System Settings - Shortcuts - KWin - Window To Next Screen](./SystemSettings_Shortcut_KWin_WindowToNextScreen__Screenshot.png)
+
+i don't know if gnome has similar things out of the box.. 
